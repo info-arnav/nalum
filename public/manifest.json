@@ -1,0 +1,39 @@
+{
+  "short_name": "Nalum",
+  "name": "Nalum - NSUT Alumni Web Portal",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "250x193"
+    },
+    {
+      "src": "/logo-background.png",
+      "type": "image/png",
+      "sizes": "250x250"
+    }
+  ],
+  "id": "/",
+  "start_url": "/",
+  "background_color": "white",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "white",
+  "shortcuts": [
+    {
+      "name": "Nalum",
+      "short_name": "Nalum",
+      "description": "Welcome to Nalum, the exclusive platform connecting NSUT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
+      "url": "/",
+      "icons": [{ "src": "/logo-background.png", "sizes": "250x250" }]
+    }
+  ],
+  "description": "Welcome to Nalum, the exclusive platform connecting NSUT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
+  "screenshots": [],
+  "sameAs": [
+    "https://twitter.com/alumninet_in",
+    "https://www.instagram.com/alumninet_in/",
+    "https://www.facebook.com/people/alumninet_in/100091574651564/",
+    "https://www.linkedin.com/company/alumninet-in/"
+  ]
+}
