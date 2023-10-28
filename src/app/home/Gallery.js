@@ -50,7 +50,9 @@ export default function Gallery() {
       >
         {images.map((e) => (
           <SwiperSlide>
-            <img
+            <Image
+	      height={400}
+              width={600}
               src={`/gallary/meet%20(${e}).jpg`}
               alt={`image number ${e} of alumni meet`}
             />

@@ -37,7 +37,7 @@ export default function Nalum({ logged }) {
             )}
           </div>
           <div className="hero-img my-auto ">
-            <Image className="w-[500px]" src={heroImg} />
+            <img className="w-[500px]" src="./hero.svg" />
           </div>
         </div>
       </section>
