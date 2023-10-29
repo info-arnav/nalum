@@ -21,6 +21,18 @@ export default function Register({
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  function generateFingerprint() {
+    const language =
+      navigator.language ||
+      navigator.userLanguage ||
+      navigator.browserLanguage ||
+      navigator.systemLanguage;
+    const platform = navigator.platform;
+    const timezone = new Date().getTimezoneOffset();
+    const cookiesEnabled = navigator.cookieEnabled;
+    const fingerprint = `${language}_${platform}_${timezone}_${cookiesEnabled}`;
+    return fingerprint;
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     const pattern = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
@@ -47,6 +59,7 @@ export default function Register({
               batch: batch,
               work_status: workStatus,
               roll: roll,
+              uuid: generateFingerprint(),
             }),
           })
             .then((e) => e.json())

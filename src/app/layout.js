@@ -4,9 +4,9 @@ import LoggedIn from "./loggedIn";
 import Navigation from "./navigation";
 import Footer from "./footer";
 import Update from "./update";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   manifest: `${process.env.LINK}manifest.json`,

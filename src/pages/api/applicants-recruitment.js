@@ -2,7 +2,6 @@ import QueryString from "./query-string";
 import cookie from "cookie";
 import CryptoJS from "crypto-js";
 import nodemailer from "nodemailer";
-import { number } from "prop-types";
 
 export default async function applicantsRecruitment(req, res) {
   let body = JSON.parse(req.body);

@@ -1,33 +1,12 @@
-import QueryString from "./query-string";
-
-export default async function verifyOTP(req, res) {
+export default async function verifyOtp(req, res) {
   let body = JSON.parse(req.body);
-  try {
-    const data = await fetch(process.env.GRAPHQL_URI, {
-      method: "POST",
-      headers: {
-        apikey: process.env.GRAPHQL_API,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query: `
-      query{
-        otp(query: ${QueryString({ email: body.email })}) {
-          email
-          otp
-        }
-      }
-      `,
-      }),
-    }).then((e) => e.json());
-    data.status = true;
-    if (data.data.otp.otp == body.otp) {
-      data.error = false;
-      res.json(data);
-    } else {
-      res.json({ error: true, message: "Invalid OTP" });
-    }
-  } catch {
-    res.json({ error: true, message: "Some Error Occured" });
-  }
+  await fetch(`${process.env.SERVER}otp-verify`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  })
+    .then((e) => e.json())
+    .then((e) => res.json(e));
 }

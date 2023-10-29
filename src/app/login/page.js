@@ -12,13 +12,29 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [password, setPassword] = useState("");
+  function generateFingerprint() {
+    const language =
+      navigator.language ||
+      navigator.userLanguage ||
+      navigator.browserLanguage ||
+      navigator.systemLanguage;
+    const platform = navigator.platform;
+    const timezone = new Date().getTimezoneOffset();
+    const cookiesEnabled = navigator.cookieEnabled;
+    const fingerprint = `${language}_${platform}_${timezone}_${cookiesEnabled}`;
+    return fingerprint;
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError("");
     let data = await fetch("/api/login", {
       method: "POST",
-      body: JSON.stringify({ email: email, password: password }),
+      body: JSON.stringify({
+        email: email,
+        password: password,
+        uuid: generateFingerprint(),
+      }),
     }).then((e) => e.json());
     if (data.error) {
       setError(data.message);

@@ -1,28 +1,12 @@
-import QueryString from "./query-string";
-
 export default async function contact(req, res) {
   let body = JSON.parse(req.body);
-  const data = await fetch(process.env.GRAPHQL_URI, {
+  await fetch(`${process.env.SERVER}contact`, {
     method: "POST",
     headers: {
-      apikey: process.env.GRAPHQL_API,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      query: `
-      mutation {
-        insertOneMessage(data: ${QueryString({
-          email: body.email,
-          message: body.message,
-        })}) {
-          _id
-          email
-          message
-        }
-      }
-    `,
-    }),
-  }).then((e) => e.json());
-  data.status = true;
-  res.json(data);
+    body: JSON.stringify(body),
+  })
+    .then((e) => e.json())
+    .then((e) => res.json(e));
 }

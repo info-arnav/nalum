@@ -69,7 +69,7 @@ export default function Links({ links, path, logout, data, link, buttons }) {
             }}
           >
             {logout && (
-              <div onClick={Logout} style={{ color: "gray" }}>
+              <div onClick={() => Logout(data)} style={{ color: "gray" }}>
                 <a style={{ color: "gray" }}>Logout</a>
               </div>
             )}
@@ -133,7 +133,7 @@ export default function Links({ links, path, logout, data, link, buttons }) {
                   </a>
                 );
               })}
-            {logout && <a onClick={Logout}>Logout</a>}
+            {logout && <a onClick={() => Logout(data)}>Logout</a>}
           </div>
           <div className="footer"></div>
         </div>

@@ -35,7 +35,8 @@
     "realm": "^12.2.1",
     "realm-web": "^2.0.0",
     "swiper": "^9.4.1",
-    "universal-cookie": "^4.0.4"
+    "universal-cookie": "^4.0.4",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "18.16.0",

@@ -37,36 +37,45 @@ export default function EditPortfolio({
     e.preventDefault();
     setError(false);
     setLoading(true);
-    let updatedData = data[type];
-    let oldData = JSON.stringify(data[type]);
+    let res;
     if (edit) {
-      updatedData[location] = {
-        title: title,
-        subTitle: subTitle,
-        description: description,
-        duration: duration,
-      };
+      res = await fetch(`/api/edit-portfolio-item`, {
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+          edit: true,
+          type: type,
+          delete: false,
+          oldData: data[type][location],
+          data: {
+            title: title,
+            subTitle: subTitle,
+            description: description,
+            duration: duration,
+          },
+        }),
+        cache: "no-cache",
+      }).then((e) => e.json());
     } else {
-      updatedData.push({
-        title: title,
-        subTitle: subTitle,
-        description: description,
-        duration: duration,
-      });
+      res = await fetch(`/api/edit-portfolio-item`, {
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+          edit: false,
+          delete: false,
+          type: type,
+          data: {
+            title: title,
+            subTitle: subTitle,
+            description: description,
+            duration: duration,
+          },
+        }),
+        cache: "no-cache",
+      }).then((e) => e.json());
     }
-    data[type] = updatedData;
-    updatedData = JSON.stringify(updatedData);
-    let bodyData = {
-      email: email,
-      oldData: oldData,
-      category: type,
-    };
-    bodyData[type] = updatedData;
-    const res = await fetch(`/api/edit-portfolio-item`, {
-      method: "POST",
-      body: JSON.stringify(bodyData),
-      cache: "no-cache",
-    }).then((e) => e.json());
+    let updatedData = res.data;
+    data = updatedData;
     if (res.error) {
       setError(true);
       setLoading(false);

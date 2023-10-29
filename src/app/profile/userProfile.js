@@ -29,21 +29,8 @@ export default function UserProfile({ data, link }) {
         setError(true);
         setLoading(false);
       } else {
-        [
-          [res.data.education, "education"],
-          [res.data.occupation, "occupation"],
-          [res.data.projects, "projects"],
-          [res.data.honors, "honors"],
-          [res.data.applications, "applications"],
-        ].forEach((e) => {
-          try {
-            res.data[e[1]] = JSON.parse(e[0]);
-          } catch {
-            res.data[e[1]] = [];
-          }
-        });
         setError(false);
-        setUserData(res.data);
+        setUserData(res.data[0]);
         setLoading(false);
       }
     };

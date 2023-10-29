@@ -91,6 +91,7 @@ export default function LoggedIn({ type, keys, link, data }) {
       cache: "no-cache",
     }).then((e) => e.json());
     setMessage(messageData.message);
+    setEmail("");
     setSent(true);
     setInviting(false);
   };
@@ -365,6 +366,7 @@ export default function LoggedIn({ type, keys, link, data }) {
           People You May Know
         </p>
         <br></br>
+        {userdata.length == 1 && "None of your batchmates are here yet"}
         {userdata.map((e) => {
           if (e._id != data.data.id) {
             return (

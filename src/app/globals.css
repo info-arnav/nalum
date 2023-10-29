@@ -9,8 +9,6 @@
 }
 
 * {
-  font-family: var(--font-inter);
-  font-style: normal;
   margin: 0;
   padding: 0;
 }
