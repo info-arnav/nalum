@@ -1,32 +1,20 @@
-import QueryString from "./query-string";
+import cookie from "cookie";
 
-export default async function login(req, res) {
+export default async function getMetaData(req, res) {
   let body = JSON.parse(req.body);
+  const cookies = cookie.parse(req.headers.cookie || "");
   try {
-    const data = await fetch(process.env.GRAPHQL_URI, {
+    body.token = cookies.login_token;
+    await fetch(`${process.env.SERVER}get-meta-data`, {
       method: "POST",
       headers: {
-        apikey: process.env.GRAPHQL_API,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        query: `
-query{
-  registeration(query:${QueryString({ _id: body.id })}) {
-    name,
-    verified,
-    _id,
-    type
-  }
-}
-`,
-      }),
-    }).then((e) => e.json());
-    res.json({
-      error: false,
-      data: data.data.registeration,
-    });
+      body: JSON.stringify(body),
+    })
+      .then((e) => e.json())
+      .then((e) => res.json(e));
   } catch {
-    res.json({ error: true, message: "Some Error Occured" });
+    res.json({ error: true, message: "Some error occued" });
   }
 }

@@ -62,9 +62,7 @@ export default function Applicants({ email, id, link }) {
           setError(true);
           setSubLoading(false);
         } else {
-          window.location.replace(
-            `/view/recruited/${e.id.data.insertOneRecruited._id}`
-          );
+          window.location.replace(`/view/recruited/${e.id}`);
 
           setError(false);
           setSubLoading(false);
@@ -80,11 +78,9 @@ export default function Applicants({ email, id, link }) {
       }),
       cache: "no-cache",
     }).then((e) => e.json());
-    if (tempData.data.data.recruitments[0].email == email) {
+    if (tempData.data[0].email == email) {
       let updatedData =
-        tempData.data.data.recruitments[0].applicants == null
-          ? []
-          : tempData.data.data.recruitments[0].applicants;
+        tempData.data[0].applicants == null ? [] : tempData.data[0].applicants;
       setOtherArray([...updatedData]);
       setData(updatedData);
       setLoading(false);
@@ -168,7 +164,7 @@ export default function Applicants({ email, id, link }) {
                           );
                         }
 
-                        pdf.save(`${compData.data._id}.pdf`);
+                        pdf.save(`${compData.data[0]._id}.pdf`);
                       });
                     }}
                   >
@@ -185,9 +181,9 @@ export default function Applicants({ email, id, link }) {
                   >
                     <div ref={pdfRef}>
                       <OtherUserProfile
-                        id={compData.data._id}
+                        id={compData.data[0]._id}
                         link={link}
-                        userData={compData.data}
+                        userData={compData.data[0]}
                       ></OtherUserProfile>
                     </div>
                   </div>
@@ -247,22 +243,6 @@ export default function Applicants({ email, id, link }) {
                                 cache: "no-cache",
                               })
                                 .then((e) => e.json())
-                                .then((res) => {
-                                  [
-                                    [res.data.education, "education"],
-                                    [res.data.occupation, "occupation"],
-                                    [res.data.projects, "projects"],
-                                    [res.data.honors, "honors"],
-                                    [res.data.applications, "applications"],
-                                  ].forEach((e) => {
-                                    try {
-                                      res.data[e[1]] = JSON.parse(e[0]);
-                                    } catch {
-                                      res.data[e[1]] = [];
-                                    }
-                                  });
-                                  return res;
-                                })
                                 .then((e) => {
                                   document
                                     .querySelector("body")

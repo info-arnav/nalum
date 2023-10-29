@@ -37,13 +37,13 @@ export default function Check({ id, link, data }) {
         <Loading></Loading>
       ) : error ? (
         <Error></Error>
-      ) : userData.email == data.data.email ? (
+      ) : userData[0].email == data.data.email ? (
         <UserProfile data={data} link={link}></UserProfile>
       ) : (
         <OtherUserProfile
           id={id}
           link={link}
-          userData={userData}
+          userData={userData[0]}
         ></OtherUserProfile>
       )}
     </>
