@@ -27,13 +27,13 @@ export default function LoggedIn({ type, keys, link, data }) {
   const [array, setArray] = useState([
     {
       title: "Resonanz'23",
-      image: "/events/2.jpg",
+      image: "/events/1.jpg",
       date: "November",
       desc: "The intra-college annual cultural fest of NSUT.",
     },
     {
       title: "Res Pelagus'23",
-      image: "/events/1.jpg",
+      image: "/events/2.jpg",
       date: "November",
       desc: "Inter-college music festival organized by Crescendo, the music society of NSUT.",
     },
