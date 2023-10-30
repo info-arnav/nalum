@@ -26,22 +26,22 @@ import { EffectCoverflow } from "swiper";
 export default function LoggedIn({ type, keys, link, data }) {
   const [array, setArray] = useState([
     {
-      title: "Xerocrypt",
+      title: "Resonanz'23",
+      image: "/events/2.jpg",
+      date: "November",
+      desc: "The intra-college annual cultural fest of NSUT.",
+    },
+    {
+      title: "Res Pelagus'23",
       image: "/events/1.jpg",
-      date: "26th August 2023",
-      desc: "A devcomm society event in collaboration with coding blocks",
+      date: "November",
+      desc: "Inter-college music festival organized by Crescendo, the music society of NSUT.",
     },
     {
-      title: "Resonance",
-      image: "/events/2.webp",
-      date: "October",
-      desc: "Intra College NSUT yearly event",
-    },
-    {
-      title: "NSUT-Thon",
+      title: "Ethnic Day",
       image: "/events/3.jpg",
-      date: "September",
-      desc: "The annual freshers society interaction event",
+      date: "6th November",
+      desc: "Flagship event of the NSUT Photography Society, Junoon.",
     },
   ]);
   useEffect(() => {
