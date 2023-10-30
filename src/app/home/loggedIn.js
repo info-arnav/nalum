@@ -234,7 +234,7 @@ export default function LoggedIn({ type, keys, link, data }) {
                             marginBottom: 5,
                             fontWeight: "bold",
                             fontSize: 21,
-                            width: "calc(100vw - 20px)",
+                            maxWidth: "calc(100vw - 20px)",
                           }}
                         >
                           {e.title}
@@ -242,14 +242,14 @@ export default function LoggedIn({ type, keys, link, data }) {
                         <p
                           style={{
                             marginBottom: 15,
-                            width: "calc(100vw - 20px)",
+                            maxWidth: "calc(100vw - 20px)",
                           }}
                         >
                           {e.date}
                         </p>
                         <p
                           style={{
-                            width: "calc(100vw - 20px)",
+                            maxWidth: "calc(100vw - 20px)",
                           }}
                         >
                           {e.desc}
