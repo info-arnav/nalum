@@ -241,7 +241,7 @@ footer {
   flex-direction: column;
   padding: 20px;
   min-height: calc(100vh - 60px);
-  background-color: #f9f7f7;
+  background-color: #f5f4f7;
   align-self: flex-end;
   color: grey !important;
 }

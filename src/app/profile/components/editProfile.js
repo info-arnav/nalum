@@ -227,11 +227,13 @@ export default function EditProfile({
                   id="bio"
                   value={bio}
                   onChange={(e) => {
-                    e.target.value.length < 60 && setBio(e.target.value);
+                    e.target.value.length <= 60 && setBio(e.target.value);
                   }}
                   placeholder="Add more details..."
                 />
-                Max 60 char
+                <p style={{ color: 60 - bio.length <= 10 && "red" }}>
+                  {60 - bio.length} characters left
+                </p>
               </div>
             </div>
             {error && error}

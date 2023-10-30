@@ -54,6 +54,8 @@ export default function UserProfile({ data, link }) {
                 data={userData}
                 link={link}
                 email={data.data.email}
+                setShow={setShow}
+                showGiven={true}
               ></Profile>
               <div className="md:absolute md:bottom-2 md:top-16 md:right-2">
                 <button
