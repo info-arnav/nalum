@@ -39,7 +39,7 @@ export default function LoggedIn({ type, keys, link, data }) {
     },
     {
       title: "Ethnic Day",
-      image: "/events/3.jpg",
+      image: "/events/3.jpeg",
       date: "6th November",
       desc: "Flagship event of the NSUT Photography Society, Junoon.",
     },
