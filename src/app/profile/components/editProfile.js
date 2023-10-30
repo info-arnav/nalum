@@ -231,9 +231,13 @@ export default function EditProfile({
                   }}
                   placeholder="Add more details..."
                 />
-                <p style={{ color: 60 - bio.length <= 10 && "red" }}>
-                  {60 - bio.length} characters left
-                </p>
+                {bio && bio.length ? (
+                  <p style={{ color: 60 - bio.length <= 10 && "red" }}>
+                    {60 - bio.length} characters left
+                  </p>
+                ) : (
+                  <p>60 characters left</p>
+                )}
               </div>
             </div>
             {error && error}
