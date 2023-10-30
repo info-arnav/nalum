@@ -99,7 +99,7 @@ export default function Login() {
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <svg
                     aria-hidden="true"
-                    className="w-5 h-5 text-black dark:text-gray-400"
+                    className="w-5 h-5 text-#00183F dark:text-gray-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -147,12 +147,12 @@ export default function Login() {
                 {loading ? "Logging you in...." : "Login"}
               </button>
               <Link href="/register">
-                <div className="text-black-600" style={{ marginTop: 10 }}>
+                <div className="text-#00183F-600" style={{ marginTop: 10 }}>
                   Not registered yet ? Register Now
                 </div>
               </Link>
               <Link href="/reset">
-                <div className="text-black-600" style={{ marginTop: 10 }}>
+                <div className="text-#00183F-600" style={{ marginTop: 10 }}>
                   Forgot password ?
                 </div>
               </Link>

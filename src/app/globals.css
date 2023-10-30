@@ -11,11 +11,12 @@
 * {
   margin: 0;
   padding: 0;
+  color: #00183f;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #00183f;
   cursor: pointer;
 }
 
@@ -62,7 +63,7 @@ nav {
   background-color: white;
   margin-left: 14.6px;
   border-radius: 100%;
-  border: solid black 0.2px;
+  border: solid #00183f 0.2px;
   padding: 2px;
 }
 
@@ -258,12 +259,12 @@ footer .row {
 }
 
 footer a {
-  color: black;
+  color: #00183f;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: black !important;
+  color: #00183f !important;
   text-decoration: none;
 }
 footer .small {
@@ -271,7 +272,7 @@ footer .small {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #00183f;
   flex: 1;
 }
 
@@ -280,7 +281,7 @@ footer .large {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #00183f;
   flex: 1;
 }
 
@@ -294,14 +295,14 @@ footer hr {
   background-color: white;
   border-radius: 60px;
   padding: 20px;
-  border: solid black;
+  border: solid #00183f;
 }
 
 footer .title {
   margin-top: 35px;
   font-weight: bold;
   font-size: 35px;
-  color: black !important;
+  color: #00183f !important;
 }
 
 footer .description {
@@ -347,7 +348,7 @@ footer form {
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 20px;
-  color: black;
+  color: #00183f;
   border: none;
   margin-bottom: 10px;
   width: 90%;
@@ -359,7 +360,7 @@ footer form {
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 15px;
-  color: black;
+  color: #00183f;
   border: none;
   margin-bottom: 10px;
   width: 90%;
@@ -423,7 +424,7 @@ footer button:disabled {
 
 hr {
   width: 100%;
-  background-color: black;
+  background-color: #00183f;
 }
 
 .dropdown-header {
@@ -522,8 +523,8 @@ hr {
   margin: 20px;
   margin-top: 80px;
   background-color: #ffffffd2;
-  color: black;
-  border: 1px solid black;
+  color: #00183f;
+  border: 1px solid #00183f;
   padding: 10px;
   width: 80%;
   max-width: 350px;
@@ -606,7 +607,7 @@ hr {
 .recruitment-box-header {
   /* background-color: rgb(24, 145, 206); */
   width: calc(100% - 30px);
-  /* color: black; */
+  /* color: #00183F; */
   font-weight: bold;
   padding: 12px;
 }
@@ -652,7 +653,7 @@ hr {
 
 .recruitment-box-website {
   font-weight: bold;
-  color: black;
+  color: #00183f;
 }
 
 .recruitment-box-website:hover {
@@ -676,7 +677,7 @@ hr {
   padding-right: 15px;
   border-radius: 20px;
   background-color: white;
-  border: solid black;
+  border: solid #00183F;
 } */
 
 /* .profile-page img {
@@ -720,7 +721,7 @@ hr {
   padding-right: 15px;
   margin-left: 10px;
   background-color: white;
-  border: solid black;
+  border: solid #00183F;
 }
 
 .category button:hover {
@@ -730,7 +731,7 @@ hr {
   padding-right: 15px;
   margin-left: 10px;
   background-color: rgb(193, 192, 192);
-  border: solid black;
+  border: solid #00183F;
 } */
 
 .category-details {
@@ -813,7 +814,7 @@ hr {
     0,
     0,
     0.4
-  ); /* Overlay effect: translucent background: black w/ partial opacity */
+  ); /* Overlay effect: translucent background: #00183F w/ partial opacity */
   z-index: 1; /* Overlay effect: positioned over other containers */
   width: 100%; /* Full width */
   height: 100%; /* Full height */
@@ -840,7 +841,7 @@ hr {
   overflow: auto;
   margin: auto; /* Auto margin according to the element width */
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid #00183f;
   border-radius: 10px; /* Optional. Rounds container corners */
 }
 
@@ -877,14 +878,14 @@ hr {
   padding-right: 20px;
   margin-left: 10px;
   background-color: white;
-  border: solid black;
+  border: solid #00183F;
 }
 
 .recruitment-box-footer button:hover {
   border-radius: 20px;
   margin-left: 10px;
   background-color: rgb(193, 192, 192);
-  border: solid black;
+  border: solid #00183F;
 } */
 
 @media (max-width: 768px) {
@@ -1081,7 +1082,7 @@ hr {
 
 #participate1:hover,#participate3:hover,#participate5:hover{
   background-color: white;
-  color: black;
+  color: #00183F;
 }
 
 #participate1:hover h2,#participate3:hover h2,#participate5:hover h2{
@@ -1090,7 +1091,7 @@ hr {
 
 #participate2:hover,#participate4:hover,#participate6:hover{
   background-color: white;
-  color: black;
+  color: #00183F;
 }
 
 #participate2:hover h2,#participate4:hover h2,#participate6:hover h2{
@@ -1166,7 +1167,7 @@ hr {
 }
 /* gallery ends */
 .quill {
-  color: black;
+  color: #00183f;
 }
 
 /* SearchBox */
@@ -1345,7 +1346,7 @@ button[disabled] {
   width: 100%;
   margin: 10px;
   max-width: 261px;
-  border: solid black;
+  border: solid #00183f;
   height: 300px;
 }
 

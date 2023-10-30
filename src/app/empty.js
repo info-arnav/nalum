@@ -11,7 +11,7 @@ export default function Empty({ link }) {
   });
   return (
     <div className="empty">
-      <RotateLoader color="black" />
+      <RotateLoader color="#00183F" />
     </div>
   );
 }

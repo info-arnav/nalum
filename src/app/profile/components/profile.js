@@ -35,7 +35,7 @@ export default function Profile({ data, email, link, setShow, showGiven }) {
                 <a href={data.instagram}>
                   <SocialIcon
                     bgColor="white"
-                    fgColor="black"
+                    fgColor="#00183F"
                     url={data.instagram}
                     style={{ marginLeft: 10, height: 35, width: 35 }}
                   ></SocialIcon>
@@ -45,7 +45,7 @@ export default function Profile({ data, email, link, setShow, showGiven }) {
                 <a href={data.facebook}>
                   <SocialIcon
                     bgColor="white"
-                    fgColor="black"
+                    fgColor="#00183F"
                     url={data.facebook}
                     style={{ marginLeft: 10, height: 35, width: 35 }}
                   ></SocialIcon>
@@ -55,7 +55,7 @@ export default function Profile({ data, email, link, setShow, showGiven }) {
                 <a href={data.linkedin}>
                   <SocialIcon
                     bgColor="white"
-                    fgColor="black"
+                    fgColor="#00183F"
                     url={data.linkedin}
                     style={{ marginLeft: 10, height: 35, width: 35 }}
                   ></SocialIcon>

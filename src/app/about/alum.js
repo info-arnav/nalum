@@ -53,7 +53,7 @@ export default function Nalum({ logged }) {
       >
         <div className="feature-container flex flex-col justify-around w-[80vw] mx-auto py-4 md:flex md:justify-between">
           <center>
-            <div className="feature-content text-black">
+            <div className="feature-content text-#00183F">
               <img
                 src="/banner.webp"
                 style={{
@@ -143,7 +143,7 @@ export default function Nalum({ logged }) {
         }}
       >
         <center style={{ margin: 10 }}>
-          <div className="feature-content text-black md:max-w-[500px]">
+          <div className="feature-content text-#00183F md:max-w-[500px]">
             <h2 className="text-4xl " style={{ fontWeight: "bold" }}>
               Gallery
             </h2>

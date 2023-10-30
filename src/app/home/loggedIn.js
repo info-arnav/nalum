@@ -199,14 +199,14 @@ export default function LoggedIn({ type, keys, link, data }) {
                   style={{
                     overflow: "hidden",
                     borderRadius: 20,
-                    outline: "3px solid black",
+                    outline: "3px solid #00183F",
                     backgroundColor: "white",
                   }}
                 >
                   <div
                     style={{
                       height: "100%",
-                      color: "black",
+                      color: "#00183F",
                       backgroundColor: "white",
                       borderRadius: 20,
                       display: "flex",
@@ -444,7 +444,7 @@ export default function LoggedIn({ type, keys, link, data }) {
             <input
               style={{
                 backgroundColor: "#F5F4F7",
-                color: "black",
+                color: "#00183F",
                 padding: 15,
                 paddingLeft: 20,
                 paddingRight: 20,
@@ -488,7 +488,7 @@ export default function LoggedIn({ type, keys, link, data }) {
         <div className="modal">
           <div
             style={{ marginTop: 10 }}
-            className="card overflow-y-auto rounded-lg border-2 border-black relative w-[calc(100%-20px)] mx-auto bg-white py-4 custom-search-height"
+            className="card overflow-y-auto rounded-lg border-2 border-#00183F relative w-[calc(100%-20px)] mx-auto bg-white py-4 custom-search-height"
           >
             <InstantSearch searchClient={searchClient} indexName="dev_alum">
               <div className="flex flex-row justify-center">

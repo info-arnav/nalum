@@ -86,7 +86,7 @@ export default function DataFetch({ email }) {
                     onClick={() => ReadHandler(e, idx)}
                     key={e._id}
                     className={`recruitment-box m-[20px] xl:py-[20px] xl:px-[25px] p-[15px] rounded-[25px] w-[100%] xl:overflow-hidden border-2 xl:border-[#b8b8b8] border-[#797979] hover:border-[#00183F] xl:w-auto bg-[#ffffff] xl:bg-white 
-                   ${idx == selected_idx && `border-2 border-black`}`}
+                   ${idx == selected_idx && `border-2 border-#00183F`}`}
                   >
                     {/* // <div
                   //   key={e._id}

@@ -59,7 +59,7 @@ export default function FeatureGallery({ data }) {
                 justifyContent: "center",
                 alignItems: "center",
                 flexDirection: "column",
-                color: "black",
+                color: "#00183F",
                 padding: 20,
                 overflowX: "auto",
                 overflowY: "auto",

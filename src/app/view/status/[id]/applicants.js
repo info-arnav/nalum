@@ -120,7 +120,7 @@ export default function Applicants({ email, id, link }) {
                   <button
                     style={{
                       width: "100%",
-                      backgroundColor: "black",
+                      backgroundColor: "#00183F",
                       color: "white",
                       margin: 20,
                       borderRadius: 20,
@@ -173,7 +173,7 @@ export default function Applicants({ email, id, link }) {
                   <div
                     id="printable"
                     style={{
-                      border: "solid black",
+                      border: "solid #00183F",
                       borderRadius: 20,
                       overflow: "hidden",
                       width: "100%",

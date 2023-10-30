@@ -94,7 +94,7 @@ export default function EditPortfolio({
       <div className="modal-content">
         <section className="bg-white">
           <div className="py-8 px-4 mx-auto max-w-3xl lg:py-14">
-            <h2 className="text-2xl text-black font-bold">
+            <h2 className="text-2xl text-#00183F font-bold">
               {edit ? "Edit Details" : "Add Details"}
             </h2>
             <hr className="mb-14 h-0.5" />

@@ -33,7 +33,7 @@ export default function OtherUserProfile({ id, link, userData }) {
                     <a href={userData.instagram}>
                       <SocialIcon
                         bgColor="white"
-                        fgColor="black"
+                        fgColor="#00183F"
                         url={userData.instagram}
                         style={{ marginLeft: 10, height: 35, width: 35 }}
                       ></SocialIcon>
@@ -43,7 +43,7 @@ export default function OtherUserProfile({ id, link, userData }) {
                     <a href={userData.facebook}>
                       <SocialIcon
                         bgColor="white"
-                        fgColor="black"
+                        fgColor="#00183F"
                         url={userData.facebook}
                         style={{ marginLeft: 10, height: 35, width: 35 }}
                       ></SocialIcon>
@@ -53,7 +53,7 @@ export default function OtherUserProfile({ id, link, userData }) {
                     <a href={userData.linkedin}>
                       <SocialIcon
                         bgColor="white"
-                        fgColor="black"
+                        fgColor="#00183F"
                         url={userData.linkedin}
                         style={{ marginLeft: 10, height: 35, width: 35 }}
                       ></SocialIcon>

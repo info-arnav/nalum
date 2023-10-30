@@ -90,7 +90,7 @@
 .remember-me {
   top: 358.67px;
   left: 778.67px;
-  color: var(--color-black);
+  color: var(--color-#00183F);
 }
 .forgot-password {
   top: 359px;
@@ -120,7 +120,7 @@
   left: 911px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--color-black);
+  color: var(--color-#00183F);
 }
 .group-child1,
 .group-icon {
@@ -310,7 +310,7 @@
   height: 100vh;
   text-align: left;
   font-size: var(--font-size-mini);
-  color: var(--color-black);
+  color: var(--color-#00183F);
   font-family: var(--font-montserrat);
   display: flex;
 }
@@ -455,7 +455,7 @@ body {
   width: 100%;
   height: 40px;
   border-radius: 20px;
-  border: 0px solid black;
+  border: 0px solid #00183f;
   background-color: #dfe6f9;
   padding: 15px;
   font-size: 20px;
@@ -472,7 +472,7 @@ left: 67% ;  */
   width: 25%;
   height: 40px;
   border-radius: 20px;
-  border: 0px solid black;
+  border: 0px solid #00183f;
   background-color: #dfe6f9;
   padding: 15px;
   font-size: 20px;

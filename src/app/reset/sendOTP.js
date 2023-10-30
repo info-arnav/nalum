@@ -63,7 +63,7 @@ export default function SendOTP({ type }) {
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <svg
                   aria-hidden="true"
-                  className="w-5 h-5 text-black dark:text-gray-400"
+                  className="w-5 h-5 text-#00183F dark:text-gray-400"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ export default function SendOTP({ type }) {
               type="submit"
               disabled={loading}
               className="form-button-hover OTP mb-10 m-4 w-[85%] lg:w-[35%] md:w-[50%] text-white bg-[#00183F] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 text-lg rounded-xl text-md px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-              // style={{ backgroundColor: "black" }}
+              // style={{ backgroundColor: "#00183F" }}
             >
               {loading ? "Sending OTP...." : "Send OTP"}
             </button>
