@@ -4,5 +4,7 @@ Disallow: /profile/
 Disallow: /create/
 Disallow: /recruitment/
 Disallow: /view/
+Disallow: /messages/
+Disallow: /users/
 
 Sitemap: https://nsut.alumninet.in/sitemap.xml

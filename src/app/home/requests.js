@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Error from "../error";
 import Loading from "./loading";
 import Button from "./button";
+import DocImage from "./docImage";
 
 export default function Requests({ status }) {
   const [show, setShow] = useState(false);
@@ -94,28 +95,12 @@ export default function Requests({ status }) {
                   <tr>
                     <th>
                       <center>
-                        {e.files ? (
-                          <img
-                            height={50}
-                            style={{
-                              maxHeight: 50,
-                              height: 50,
-                              maxWidth: 70,
-                              margin: 10,
-                            }}
-                            src={e.files}
-                            onClick={(temp) => {
-                              setImg(e.files);
-                              document
-                                .querySelector("body")
-                                .classList.add("no-scroll");
-                              setShow(true);
-                            }}
-                            alt="Verification document uploaded by User"
-                          ></img>
-                        ) : (
-                          <div>No image uploaded</div>
-                        )}
+                        <DocImage
+                          authEmail={status.data.email}
+                          inviteEmail={e.email}
+                          setShow={setShow}
+                          setImg={setImg}
+                        ></DocImage>
                       </center>
                     </th>
                     <th>
