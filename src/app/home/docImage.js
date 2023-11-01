@@ -19,7 +19,7 @@ export default function DocImage({ authEmail, inviteEmail, setShow, setImg }) {
   };
   useEffect(() => {
     loadImage();
-  }, []);
+  }, [inviteEmail]);
   if (loading) {
     return <div>Loading.....</div>;
   } else if (data) {
