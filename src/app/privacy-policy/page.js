@@ -37,7 +37,7 @@ export default function Privacy() {
       <li>API key generation and encryption: The use of unique API keys for authentication and the encryption of these keys provide an additional layer of security for user accounts.</li>
       <li>HTTP-only cookies: Storing sensitive information, like the encrypted API key, in an HTTP-only cookie prevents client-side JavaScript access, reducing the risk of XSS attacks.</li>
       <li>Secure, Lax, non-HTTP-only cookies: Saving the username in a secure and Lax non-HTTP-only cookie helps protect against CSRF attacks while allowing for fast login and logout functionality.</li>
-      <li>User-level access control: Implementing user-level access control rules in the Realm database with GraphQL and MongoDB ensures that users can only access their own data, preventing unauthorized access or manipulation.</li>
+      <li>User-level access control: Implementing user-level access control rules in the Realm database with GraphQL and MongoDB ensures that users can only access their own data, preventing unauthorised access or manipulation.</li>
       <li>Password hashing with bcrypt: The use of bcrypt for hashing passwords before storage adds an extra layer of security, making it more difficult for attackers to crack the passwords.</li>
   </ul>`,
     ],
