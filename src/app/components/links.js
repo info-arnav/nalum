@@ -28,7 +28,7 @@ export default function Links({ links, path, logout, data, link, buttons }) {
                 e[0].toLowerCase() == "register" && "nav-button"
               } ${e[1].toLowerCase() == path.toLowerCase() && "active"}`}
             >
-              <Link href={e[1].toLowerCase()}>{e[0]}</Link>
+              <a href={e[1].toLowerCase()}>{e[0]}</a>
             </div>
           );
         })}
@@ -52,7 +52,7 @@ export default function Links({ links, path, logout, data, link, buttons }) {
                     e[0].toLowerCase() == "register" && "nav-button"
                   } ${e[1].toLowerCase() == path.toLowerCase() && "active"}`}
                 >
-                  <Link href={e[1].toLowerCase()}>{e[0]}</Link>
+                  <a href={e[1].toLowerCase()}>{e[0]}</a>
                 </div>
               );
             })}

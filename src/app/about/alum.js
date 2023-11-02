@@ -29,11 +29,11 @@ export default function Nalum({ logged }) {
               within the NSUT community.
             </p>
             {!logged && (
-              <Link href="/login">
+              <a href="/login">
                 <div className="button w-fit text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none tracking-widest">
                   Login Now
                 </div>
-              </Link>
+              </a>
             )}
           </div>
           <div className="hero-img my-auto ">

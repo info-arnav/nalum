@@ -271,13 +271,13 @@ export default function DataFetch({ email }) {
                       )}
                     </div> */}
                     <div className="recruitment-box-footer sm:flex-row  flex-col">
-                      <Link
+                      <a
                         href={`/view/status/${e._id}`}
                         id="status"
                         className="recuit-button text-white"
                       >
                         Status
-                      </Link>
+                      </a>
                       <Modal
                         type="edit"
                         data={e}

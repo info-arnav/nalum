@@ -129,11 +129,11 @@ export default function Batch({ type, otp, email }) {
           >
             Choose Password
           </button>
-          <Link href="/login">
+          <a href="/login">
             <div className="text-#00183F-600" style={{ marginTop: 10 }}>
               Already registered ? Login Now
             </div>
-          </Link>
+          </a>
         </form>
       )}
     </>

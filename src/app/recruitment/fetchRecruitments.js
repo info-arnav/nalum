@@ -220,9 +220,9 @@ export default function DataFetch({ email }) {
                       user={email}
                       applicants={e.applicants}
                     ></Apply>
-                    <Link href={`/view/recruitment/${e._id}`}>
+                    <a href={`/view/recruitment/${e._id}`}>
                       <button>Read More</button>
-                    </Link>
+                    </a>
                   </div> */}
                       <div className="grid grid-cols-2 divide-x w-[80%] mt-4 mb-2">
                         <div>

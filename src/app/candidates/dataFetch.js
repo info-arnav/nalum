@@ -227,13 +227,13 @@ export default function DataFetch({ email }) {
                             </div>
                           </div>
                           <div className="recruitment-box-footer">
-                            <Link
+                            <a
                               href={`/view/recruited/${e._id}`}
                               id="status"
                               className="recuit-button text-white"
                             >
                               Applicants
-                            </Link>
+                            </a>
                           </div>
                         </div>
 

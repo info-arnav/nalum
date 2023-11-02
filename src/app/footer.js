@@ -36,7 +36,7 @@ export default function Footer({ data }) {
       <footer>
         <div className="row" style={{ marginTop: 40 }}>
           <div className="large">
-            <Link href="/">
+            <a href="/">
               <Image
                 className="footer-img"
                 src="/logo.png"
@@ -44,10 +44,10 @@ export default function Footer({ data }) {
                 height={180}
                 alt="Logo of the platform Nalum"
               ></Image>
-            </Link>
-            <Link href="/">
+            </a>
+            <a href="/">
               <div className="title">Nalum</div>
-            </Link>
+            </a>
             <div className="description" style={{ fontSize: 16 }}>
               <center>The NSUT Alumni Student Networking Platform</center>
             </div>
@@ -62,17 +62,17 @@ export default function Footer({ data }) {
                     ["Register", "/register"],
                     ["Privacy Policy", "/privacy-policy"],
                   ].map((e) => (
-                    <Link key={e[0]} href={e[1].toLowerCase()}>
+                    <a key={e[0]} href={e[1].toLowerCase()}>
                       {e[0]}
-                    </Link>
+                    </a>
                   ))
                 : [
                     ["About", "/about"],
                     ["Privacy Policy", "/privacy-policy"],
                   ].map((e) => (
-                    <Link key={e[0]} href={e[1].toLowerCase()}>
+                    <a key={e[0]} href={e[1].toLowerCase()}>
                       {e[0]}
-                    </Link>
+                    </a>
                   ))}
             </div>
           </div>

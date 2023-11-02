@@ -316,7 +316,7 @@ export default function LoggedIn({ type, keys, link, data }) {
         </button>
         {type == "student" ? (
           <div className="logged-in-button" style={{ marginTop: 20 }}>
-            <Link
+            <a
               href="/recruitment"
               className="right-space"
               style={{
@@ -331,11 +331,11 @@ export default function LoggedIn({ type, keys, link, data }) {
               }}
             >
               Find Opportunities
-            </Link>
+            </a>
           </div>
         ) : (
           <div className="logged-in-button" style={{ marginTop: 20 }}>
-            <Link
+            <a
               href="/recruitment"
               className="right-space"
               style={{
@@ -350,8 +350,8 @@ export default function LoggedIn({ type, keys, link, data }) {
               }}
             >
               Manage Recruitments
-            </Link>
-            <Link
+            </a>
+            <a
               href="/candidates"
               style={{
                 backgroundColor: "#DFE6F9",
@@ -363,7 +363,7 @@ export default function LoggedIn({ type, keys, link, data }) {
               }}
             >
               Past Recruitments
-            </Link>
+            </a>
           </div>
         )}
         <br></br>

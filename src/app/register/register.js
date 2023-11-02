@@ -191,11 +191,11 @@ export default function Register({
       >
         {loading ? "Registering...." : "Register"}
       </button>
-      <Link href="/login">
+      <a href="/login">
         <div className="text-#00183F-600" style={{ marginTop: 10 }}>
           Already registered ? Login Now
         </div>
-      </Link>
+      </a>
     </form>
   );
 }

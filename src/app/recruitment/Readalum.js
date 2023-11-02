@@ -22,13 +22,13 @@ const Readalum = (props) => {
               </h5>
             </div>
             <div className="recruitment-box-footer sm:flex-row  flex-col">
-              {/* <Link
+              {/* <a
                 href={`/view/status/${props.info._id}`}
                 id="status"
                 className="recuit-button text-white"
               >
                 Status
-              </Link>
+              </a>
               <Modal
                 type="edit"
                 data={props.info}
@@ -107,13 +107,13 @@ const Readalum = (props) => {
       )}
 
       <div className="recruitment-box-footer sm:flex-row  flex-col">
-        {/* <Link
+        {/* <a
           href={`/view/status/${props.info._id}`}
           id="status"
           className="recuit-button text-white"
         >
           Status
-        </Link>
+        </a>
         <Modal
           type="edit"
           data={props.info}

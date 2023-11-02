@@ -146,16 +146,16 @@ export default function Login() {
               >
                 {loading ? "Logging you in...." : "Login"}
               </button>
-              <Link href="/register">
+              <a href="/register">
                 <div className="text-#00183F-600" style={{ marginTop: 10 }}>
                   Not registered yet ? Register Now
                 </div>
-              </Link>
-              <Link href="/reset">
+              </a>
+              <a href="/reset">
                 <div className="text-#00183F-600" style={{ marginTop: 10 }}>
                   Forgot password ?
                 </div>
-              </Link>
+              </a>
             </form>
           </div>
         </main>
