@@ -64,6 +64,7 @@ export default function LoggedIn({ type, keys, link, data }) {
   const [inviting, setInviting] = useState(false);
   const [num, setNum] = useState(10);
   const [userdata, setUserData] = useState([]);
+  const [referral, setRefferal] = useState(false);
   const find = async () => {
     let tempData = await fetch(`/api/find-people`, {
       method: "POST",
@@ -95,9 +96,20 @@ export default function LoggedIn({ type, keys, link, data }) {
     setSent(true);
     setInviting(false);
   };
+  const getReferral = async () => {
+    let codeData = await fetch(`/api/get-refferal`, {
+      method: "POST",
+      body: JSON.stringify({
+        auth_email: data.data.email,
+      }),
+      cache: "no-cache",
+    }).then((e) => e.json());
+    setRefferal(codeData.code);
+  };
   useEffect(() => {
     find();
   }, [num]);
+  useEffect(() => getReferral(), []);
   function Hit({ hit }) {
     if (data.data.id != hit.objectID) {
       return (
@@ -479,6 +491,11 @@ export default function LoggedIn({ type, keys, link, data }) {
               {inviting ? "Sending Invite...." : "Invite"}
             </button>
             {sent && message}
+            <p style={{ fontWeight: "bold", marginTop: 20 }}>OR</p>
+            <p style={{ marginTop: 20 }}>
+              Share the code <b>{referral ? referral : "________"}</b> with your
+              mates
+            </p>
           </>
         )}
       </center>

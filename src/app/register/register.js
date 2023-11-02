@@ -15,6 +15,7 @@ export default function Register({
   batch,
   workStatus,
   roll,
+  code,
 }) {
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -59,6 +60,7 @@ export default function Register({
               batch: batch,
               work_status: workStatus,
               roll: roll,
+              code: code,
               uuid: generateFingerprint(),
             }),
           })

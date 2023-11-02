@@ -6,6 +6,7 @@ import Link from "next/link";
 
 export default function Batch({ type, otp, email }) {
   const [validated, setValidated] = useState(false);
+  const [code, setCode] = useState("");
   const [phone, setPhone] = useState("");
   const [roll, setRoll] = useState("");
   const [course, setCourse] = useState("");
@@ -26,6 +27,7 @@ export default function Batch({ type, otp, email }) {
           batch={batch}
           workStatus={workStatus}
           roll={roll}
+          code={code}
         ></Register>
       ) : (
         <form
@@ -43,6 +45,14 @@ export default function Batch({ type, otp, email }) {
             className="m-2 relative mb-6 w-[70%] mx-auto"
             style={{ textAlign: "left" }}
           >
+            <input
+              className="bg-[#DFE6F9] pl-10 text-lg text-gray-900  rounded-xl w-full p-2.5 "
+              type="text"
+              value={code}
+              onChange={(e) => setCode(e.target.value)}
+              placeholder="Referral Code"
+              style={{ marginBottom: 10 }}
+            ></input>
             <select
               placeholder="Batch"
               style={{ marginTop: 10 }}

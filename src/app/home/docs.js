@@ -156,7 +156,7 @@ export default function Docs({ data }) {
             style={{ textAlign: "left", margin: 10 }}
           >
             <input
-              type="text"
+              type="tel"
               className="bg-[#F5F4F7] pl-10 text-lg text-gray-900  rounded-xl w-full p-2.5 "
               placeholder="Phone Number"
               required
