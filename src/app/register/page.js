@@ -200,7 +200,7 @@ export default function Register() {
                         alt="error"
                       ></img>
                     </div>
-                    <p className="content-35">Alumni</p>
+                    <p className="content-35">Alumnus</p>
                   </div>
 
                   <div
