@@ -45,14 +45,16 @@ export default function Batch({ type, otp, email }) {
             className="m-2 relative mb-6 w-[70%] mx-auto"
             style={{ textAlign: "left" }}
           >
-            <input
-              className="bg-[#DFE6F9] pl-10 text-lg text-gray-900  rounded-xl w-full p-2.5 "
-              type="text"
-              value={code}
-              onChange={(e) => setCode(e.target.value)}
-              placeholder="Referral Code"
-              style={{ marginBottom: 10 }}
-            ></input>
+            {type != "student" && (
+              <input
+                className="bg-[#DFE6F9] pl-10 text-lg text-gray-900  rounded-xl w-full p-2.5 "
+                type="text"
+                value={code}
+                onChange={(e) => setCode(e.target.value)}
+                placeholder="Referral Code"
+                style={{ marginBottom: 10 }}
+              ></input>
+            )}
             <select
               placeholder="Batch"
               style={{ marginTop: 10 }}
