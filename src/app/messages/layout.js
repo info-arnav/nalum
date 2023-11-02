@@ -2,13 +2,13 @@ import Empty from "../empty";
 import LoggedIn from "../loggedIn";
 
 export const metadata = {
-  title: "All Users",
+  title: "Messages",
   description:
-    "Explore and oversee the comprehensive list of registered users on our admin page at Nalum. Gain complete visibility and control over user accounts in one centralized platform. Effectively manage user data and permissions with ease. Nalum - Empowering admins with streamlined user management for enhanced platform control.",
+    "View all the queries that people have in using the platform via the admin console of Nalum. You can view all the messages sent to the admin on the portal here.",
   openGraph: {
-    title: "All Users",
+    title: "Messages",
     description:
-      "Explore and oversee the comprehensive list of registered users on our admin page at Nalum. Gain complete visibility and control over user accounts in one centralized platform. Effectively manage user data and permissions with ease. Nalum - Empowering admins with streamlined user management for enhanced platform control.",
+      "View all the queries that people have in using the platform via the admin console of Nalum. You can view all the messages sent to the admin on the portal here.",
     url: `${process.env.LINK}users`,
     siteName: "Nalum",
     images: [
@@ -29,9 +29,9 @@ export const metadata = {
     type: "website",
   },
   twitter: {
-    title: "All Users",
+    title: "Messages",
     description:
-      "Explore and oversee the comprehensive list of registered users on our admin page at Nalum. Gain complete visibility and control over user accounts in one centralized platform. Effectively manage user data and permissions with ease. Nalum - Empowering admins with streamlined user management for enhanced platform control.",
+      "View all the queries that people have in using the platform via the admin console of Nalum. You can view all the messages sent to the admin on the portal here.",
     images: [
       `${process.env.LINK}logo-background.png`,
       `${process.env.LINK}logo.png`,
