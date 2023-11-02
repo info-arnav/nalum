@@ -1,5 +1,4 @@
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
 import LoggedIn from "./loggedIn";
 import Navigation from "./navigation";
 import Footer from "./footer";
@@ -87,7 +86,6 @@ export default function RootLayout({ children }) {
           LINK={process.env.LINK}
         ></Navigation>
         <div className="nav-gap"></div>
-        <Analytics />
         {status.loggedIn && (
           <Update email={status.data.email} oldData={status.data}></Update>
         )}
