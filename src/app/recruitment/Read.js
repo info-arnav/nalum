@@ -17,12 +17,14 @@ const Read = (props) => {
               </h5>
             </div>
             <div className="recruitment-box-footer">
-              <Apply
-                recruitment={props.info._id}
-                user={props.email}
-                profiles={props.profiles}
-                setProfiles={props.setProfiles}
-              ></Apply>
+              {props.type != "admin" && (
+                <Apply
+                  recruitment={props.info._id}
+                  user={props.email}
+                  profiles={props.profiles}
+                  setProfiles={props.setProfiles}
+                ></Apply>
+              )}
             </div>
           </div>
 

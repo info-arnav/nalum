@@ -5,7 +5,7 @@ import Loading from "../home/loading";
 import Error from "../error";
 import Read from "./Read.js";
 
-export default function DataFetch({ email }) {
+export default function DataFetch({ email, type }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [data, setData] = useState("");
@@ -292,6 +292,7 @@ export default function DataFetch({ email }) {
                     : []
                 }
                 setProfiles={setProfiles}
+                type={type}
               ></Read>
             </div>
           </div>
