@@ -54,7 +54,9 @@ export default function RecruitmentPage({ children }) {
     );
   } else {
     if (
-      (status.data.type == "alumni" || status.data.type == "student") &&
+      (status.data.type == "alumni" ||
+        status.data.type == "student" ||
+        status.data.type == "admin") &&
       status.data.verified
     ) {
       return <>{children}</>;
