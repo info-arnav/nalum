@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import heroImg from "..//image/hero.png";
-import FeatureGallery from "../home/featureGallery";
+import FeatureGallery from "../home/FeatureGallery";
 import Gallery from "../home/Gallery";
 export default function Nalum({ logged }) {
   return (
@@ -100,7 +100,7 @@ export default function Nalum({ logged }) {
             }}
           >
             <h2 className="text-4xl " style={{ fontWeight: "bold" }}>
-              Feautres ?
+              Features ?
             </h2>
             <FeatureGallery
               data={[

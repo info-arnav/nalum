@@ -165,7 +165,7 @@ nav {
   display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 920px) {
   .nav-small {
     flex: 1;
     display: flex;

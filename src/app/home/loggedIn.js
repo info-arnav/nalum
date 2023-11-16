@@ -24,42 +24,14 @@ import "swiper/css/navigation";
 import { EffectCoverflow } from "swiper";
 
 export default function LoggedIn({ type, keys, link, data }) {
-  const [array, setArray] = useState([
-    {
-      title: "Resonanz'23",
-      image: "/events/1.jpg",
-      date: "November",
-      desc: "The intra-college annual cultural fest of NSUT.",
-    },
-    {
-      title: "Res Pelagus'23",
-      image: "/events/2.jpg",
-      date: "November",
-      desc: "Inter-college music festival organized by Crescendo, the music society of NSUT.",
-    },
-    {
-      title: "Ethnic Day",
-      image: "/events/3.jpeg",
-      date: "6th November",
-      desc: "Flagship event of the NSUT Photography Society, Junoon.",
-    },
-  ]);
-  useEffect(() => {
-    let len = array.length;
-    if (len <= 6) {
-      let temp = array;
-      for (let x = 0; x < len; x = x + 1) {
-        temp.push(array[x]);
-      }
-      setArray(temp);
-    }
-  }, []);
+  const [array, setArray] = useState([]);
   const searchClient = algoliasearch(keys[0], keys[1]);
   const [show, setShow] = useState(false);
   const [sent, setSent] = useState(false);
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(true);
+  const [loadingTwo, setLoadingTwo] = useState(true);
   const [subloading, setSubLoading] = useState(false);
   const [inviting, setInviting] = useState(false);
   const [num, setNum] = useState(10);
@@ -77,6 +49,21 @@ export default function LoggedIn({ type, keys, link, data }) {
     setUserData(tempData.data);
     setLoading(false);
     setSubLoading(false);
+  };
+  const getEvents = async () => {
+    let tempData = await fetch(`/api/get-events`, {
+      method: "POST",
+      body: JSON.stringify({
+        email: data.data.email,
+      }),
+      cache: "no-cache",
+    }).then((e) => e.json());
+    let temp = [];
+    for (let i = 0; i < 6; i++) {
+      temp = temp.concat(tempData.data);
+    }
+    setArray(temp);
+    setLoadingTwo(false);
   };
   const invite = async () => {
     setSent(false);
@@ -109,6 +96,9 @@ export default function LoggedIn({ type, keys, link, data }) {
   useEffect(() => {
     find();
   }, [num]);
+  useEffect(() => {
+    getEvents();
+  }, []);
   useEffect(() => getReferral(), []);
   function Hit({ hit }) {
     if (data.data.id != hit.objectID) {
@@ -159,7 +149,7 @@ export default function LoggedIn({ type, keys, link, data }) {
       );
     }
   }
-  return loading ? (
+  return loading || loadingTwo ? (
     <Loading></Loading>
   ) : (
     <>
@@ -229,7 +219,7 @@ export default function LoggedIn({ type, keys, link, data }) {
                   >
                     <div
                       style={{
-                        backgroundImage: `url("${e.image}")`,
+                        backgroundImage: `url("${link}api/image/${e._id}")`,
                         width: "100%",
                         height: "50%",
                         backgroundPosition: "center",
@@ -251,20 +241,33 @@ export default function LoggedIn({ type, keys, link, data }) {
                         >
                           {e.title}
                         </p>
+
                         <p
                           style={{
-                            marginBottom: 15,
+                            display: "flex",
+                            flexDirection: "column",
                             maxWidth: "calc(100vw - 20px)",
                           }}
                         >
-                          {e.date}
-                        </p>
-                        <p
-                          style={{
-                            maxWidth: "calc(100vw - 20px)",
-                          }}
-                        >
-                          {e.desc}
+                          {e.details}
+                          {e.link && (
+                            <a
+                              style={{
+                                backgroundColor: "#00183F",
+                                color: "white",
+                                padding: 10,
+                                paddingLeft: 20,
+                                paddingRight: 20,
+                                borderRadius: 20,
+                                fontWeight: "bold",
+                                marginTop: 10,
+                                maxWidth: "calc(100vw - 20px)",
+                              }}
+                              href={e.link}
+                            >
+                              {e.linkText ? e.linkText : "More Details"}
+                            </a>
+                          )}
                         </p>
                       </center>
                     </div>

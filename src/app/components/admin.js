@@ -9,6 +9,7 @@ export default function Admin({ path, data, link }) {
         ["Messages", "/messages"],
         ["Invites", "/invites"],
         ["Internships", "/recruitment"],
+        ["Events", "/events"],
       ]}
       logout={true}
       path={path}
