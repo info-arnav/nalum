@@ -14,6 +14,7 @@ export default function Batch({ type, otp, email }) {
   const [batch, setBatch] = useState("");
   const [workStatus, setWorkStatus] = useState("");
   const [error, setError] = useState("");
+  const [name, setName] = useState("");
   return (
     <>
       {validated ? (
@@ -28,6 +29,7 @@ export default function Batch({ type, otp, email }) {
           workStatus={workStatus}
           roll={roll}
           code={code}
+          name={name}
         ></Register>
       ) : (
         <form
@@ -55,6 +57,15 @@ export default function Batch({ type, otp, email }) {
                 style={{ marginBottom: 10 }}
               ></input>
             )}
+            <input
+              className="bg-[#DFE6F9] pl-10 text-lg text-gray-900  rounded-xl w-full p-2.5 "
+              type="text"
+              value={code}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Name"
+              style={{ marginBottom: 10 }}
+              required
+            ></input>
             <select
               placeholder="Batch"
               style={{ marginTop: 10 }}
