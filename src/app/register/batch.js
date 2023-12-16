@@ -60,7 +60,7 @@ export default function Batch({ type, otp, email }) {
             <input
               className="bg-[#DFE6F9] pl-10 text-lg text-gray-900  rounded-xl w-full p-2.5 "
               type="text"
-              value={code}
+              value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Name"
               style={{ marginBottom: 10 }}
