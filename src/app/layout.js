@@ -27,6 +27,9 @@ export const metadata = {
     "Delhi",
     "Institute",
     "Technology",
+    "Netaji",
+    "Subhas",
+    "University",
   ],
   openGraph: {
     title: {
