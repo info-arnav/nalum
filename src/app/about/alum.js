@@ -24,9 +24,9 @@ export default function Nalum({ logged }) {
             <p className="my-7 text-gray-500">
               Unlock a world of opportunities and connections at Nalum, the
               exclusive cross-platform web application designed to empower both
-              NSUT alumni and students. Seamlessly connecting generations, Nalum
-              redefines networking, knowledge sharing, and career advancement
-              within the NSUT community.
+              NSUT/DIT alumni and students. Seamlessly connecting generations,
+              Nalum redefines networking, knowledge sharing, and career
+              advancement within the NSUT/DIT community.
             </p>
             {!logged && (
               <a href="/login">
@@ -69,11 +69,11 @@ export default function Nalum({ logged }) {
               <br></br>
               <p>
                 Our mission at NALUM is to create a robust and interconnected
-                platform that bridges the gap between NSUT's alumni and current
-                students. By facilitating meaningful interactions, knowledge
-                exchange, and mentorship, we aim to empower personal and
-                professional growth, fostering a dynamic community that thrives
-                on collaboration and mutual success.
+                platform that bridges the gap between NSUT/DIT's alumni and
+                current students. By facilitating meaningful interactions,
+                knowledge exchange, and mentorship, we aim to empower personal
+                and professional growth, fostering a dynamic community that
+                thrives on collaboration and mutual success.
               </p>
             </div>
           </center>
@@ -106,7 +106,7 @@ export default function Nalum({ logged }) {
               data={[
                 [
                   "Connected Networking",
-                  "Seamlessly connect with NSUT alumni and students, fostering a vibrant community that thrives on collaboration and shared experiences.",
+                  "Seamlessly connect with /DIT alumni and students, fostering a vibrant community that thrives on collaboration and shared experiences.",
                 ],
 
                 [

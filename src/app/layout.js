@@ -14,18 +14,27 @@ export const metadata = {
     template: "%s | Nalum",
   },
   description:
-    "Welcome to Nalum, the exclusive platform connecting NSUT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
+    "Welcome to Nalum, the exclusive platform connecting NSUT/DIT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
   generator: "Nalum",
   applicationName: "Nalum",
   referrer: "origin-when-cross-origin",
-  keywords: ["Nalum", "NSUT", "NSIT", "Alumni"],
+  keywords: [
+    "Nalum",
+    "NSUT",
+    "NSIT",
+    "Alumni",
+    "DIT",
+    "Delhi",
+    "Institute",
+    "Technology",
+  ],
   openGraph: {
     title: {
       default: "Nalum",
       template: "%s | Nalum",
     },
     description:
-      "Welcome to Nalum, the exclusive platform connecting NSUT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
+      "Welcome to Nalum, the exclusive platform connecting NSUT/DIT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
     url: process.env.LINK,
     siteName: "Nalum",
     images: [
@@ -63,7 +72,7 @@ export const metadata = {
       template: "%s | Nalum",
     },
     description:
-      "Welcome to Nalum, the exclusive platform connecting NSUT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
+      "Welcome to Nalum, the exclusive platform connecting NSUT/DIT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
     siteId: "1643623396696006658",
     creator: "@alumninet_in",
     creatorId: "1643623396696006658",

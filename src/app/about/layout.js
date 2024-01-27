@@ -1,11 +1,11 @@
 export const metadata = {
   title: "About",
   description:
-    "Welcome to Nalum, the exclusive platform connecting NSUT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
+    "Welcome to Nalum, the exclusive platform connecting NSUT/DIT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT/DIT community.",
   openGraph: {
     title: "About",
     description:
-      "Welcome to Nalum, the exclusive platform connecting NSUT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
+      "Welcome to Nalum, the exclusive platform connecting NSUT/DIT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT/DIT community.",
     url: `${process.env.LINK}about`,
     siteName: "Nalum",
     images: [
@@ -28,7 +28,7 @@ export const metadata = {
   twitter: {
     title: "About",
     description:
-      "Welcome to Nalum, the exclusive platform connecting NSUT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
+      "Welcome to Nalum, the exclusive platform connecting NSUT/DIT students and alumni. Discover networking opportunities, mentorship, job offers, internships, and more while staying engaged with the NSUT community.",
     images: [
       `${process.env.LINK}logo-background.png`,
       `${process.env.LINK}logo.png`,

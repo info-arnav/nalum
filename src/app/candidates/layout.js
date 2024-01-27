@@ -4,8 +4,8 @@ import LoggedIn from "../loggedIn";
 export async function metadata() {
   const status = LoggedIn();
   let description = status.loggedIn
-    ? "Explore exciting job opportunities on Nalum, the NSUT alumni portal. Browse and apply for positions posted by esteemed alumni, and kickstart your career with valuable connections in your professional network."
-    : "Unlock your career potential with Nalum, the NSUT alumni portal. Log in to explore job opportunities posted by alumni, apply for positions, and connect with professionals to boost your career growth and network.";
+    ? "Explore exciting job opportunities on Nalum, the NSUT/DIT alumni portal. Browse and apply for positions posted by esteemed alumni, and kickstart your career with valuable connections in your professional network."
+    : "Unlock your career potential with Nalum, the NSUT/DIT alumni portal. Log in to explore job opportunities posted by alumni, apply for positions, and connect with professionals to boost your career growth and network.";
   return {
     title: "View History",
     description: description,
