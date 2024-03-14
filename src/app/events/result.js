@@ -114,12 +114,24 @@ export default function Result({ data, universal_link }) {
           <h1>No events</h1>
         ) : (
           array.map((e) => (
-            <div style={{ textAlign: "left" }}>
+            <div
+              style={{
+                textAlign: "left",
+                border: "solid black",
+                borderRadius: 20,
+                width: "calc(100% - 20px)",
+                maxWidth: 500,
+                margin: 20,
+                padding: 20,
+              }}
+            >
               <img
                 src={`${universal_link}api/image/${e._id}`}
                 style={{
-                  width: "calc(100% - 20px)",
-                  maxWidth: 900,
+                  width: "100%",
+                  maxWidth: 500,
+                  borderRadius: 20,
+                  marginBottom: 20,
                 }}
               ></img>
               <b>{e.title}</b>
