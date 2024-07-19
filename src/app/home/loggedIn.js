@@ -59,8 +59,12 @@ export default function LoggedIn({ type, keys, link, data }) {
       cache: "no-cache",
     }).then((e) => e.json());
     let temp = [];
-    for (let i = 0; i < 6; i++) {
-      temp = temp.concat(tempData.data);
+    if (tempData.data.length > 1) {
+      for (let i = 0; i < 6; i++) {
+        temp = temp.concat(tempData.data);
+      }
+    } else {
+      temp = tempData.data;
     }
     setArray(temp);
     setLoadingTwo(false);
